@@ -1,0 +1,106 @@
+.card-edicao {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px rgb(237, 236, 236);
+  border-radius: 5px;
+  padding: 20px;
+  max-width: 500px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+}
+
+
+
+.card-edicao h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #FFf;
+}
+
+
+/* Estilos para o formulário dentro do card */
+.card-edicao form {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-edicao input {
+  color: #FFF;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+
+::ng-deep .mat-mdc-form-field .mat-mdc-floating-label.mdc-floating-label {
+  color: #FFF;
+}
+
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before {
+  border-bottom-color: rgb(255, 255, 255);
+}
+
+::ng-deep .mat-mdc-radio-button .mdc-form-field {
+  color: #fff;
+}
+
+::ng-deep .mat-mdc-radio-button.mat-primary {
+--mdc-radio-unselected-icon-color: #fff;
+}
+
+.checkbox-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkbox-group label {
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+/* Estilos para o botão */
+.botao {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  background: linear-gradient(0deg, #d53561, #f15b2a);
+  width: 150px;
+  margin: 0 auto;
+  cursor: pointer;
+
+}
+
+.botao-espacamento {
+  padding-top: 32px;
+}
+
+.botao-desabilitado {
+  background: #7A7F87;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  width: 150px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.example-section ::ng-deep .mdc-form-field>label {
+  padding-left: 0px;
+  padding-top: 4px;
+}
+
+.example-section {
+  display: flex;
+  justify-content: unset;
+}
+
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: transparent !important;
+}

@@ -1,0 +1,16 @@
+<nav id="menu-bar">
+  <div id="menu" (click)="onClickMenu()" [ngClass]="{'change' : isMenuOpen}">
+      <span id="bar1" class="bar"></span>
+      <span id="bar2" class="bar"></span>
+      <span id="bar3" class="bar"></span>
+
+  </div>
+    <ul class="nav" id="nav" [ngClass]="{'change': isMenuOpen}">
+      <li><a routerLink="/" (click)="onClickMenu()">Início</a></li>
+      <li><a routerLink="/cadastro" (click)="onClickMenu()">Cadastro</a></li>
+      <li><a routerLink="/alunos" (click)="onClickMenu()">Alunos</a></li>
+    </ul>
+</nav>
+<div class="menu-bg" id="menu-bg" [ngClass]="{'change-bg': isMenuOpen}"></div>
+
+

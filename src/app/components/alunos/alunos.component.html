@@ -1,0 +1,50 @@
+<div class="container-alunos">
+  <form class="buscar-alunos" style="margin-top: -50px;">
+    <input type="search"
+    class="filtro"
+    placeholder="O que você procura?"
+    autofocus
+    [formControl]="filtro"
+    />
+    <img src="assets/images/lupa.png" alt="Lupa azul" class="lupa"/>
+  </form>
+  <div class="overflow-auto" style="max-height: 400px;">
+      <!-- Fiz essa verificação com o "ngClass" porque a imagem estava ficando bem pequena a largura
+            quando pesquisa por um usuário, quando for 1 eu aumentei para ficar confortável
+            para o usuário.
+      -->
+      <div [ngClass]="{'row-cols-md-2': alunos.length > 1, 'row-cols-md-1': alunos.length === 1}" class="row g-4">
+      <div class="col" *ngFor="let aluno of alunos">
+        <div class="card">
+            <div class="d-flex align-items-center">
+              <!-- verificação para mudar a imagem de acordo com o sexo -->
+            <img [src]="aluno.sexo === 'Masculino' ? perfilMasculino : perfilFeminino" class="card-img-top img-icone me-auto p-2" alt="...">
+            <p class="p-2" style="color: white; cursor: pointer;" [routerLink]="['/alunos/editar', aluno.id]">Editar</p>
+            <p class="p-2" style="color: white; cursor: pointer;" (click)="removerAluno(aluno.id)">Excluir</p>
+            </div>
+
+          <div class="d-flex flex-column align-items-start mb-3 text-dados">
+            <span class="p-2">Nome: {{ aluno.nome }} {{ aluno.sobrenome }}</span>
+            <span class="p-2">Idade: {{ aluno.idade }}</span>
+            <span class="p-2">Sexo: {{ aluno.sexo }}</span>
+          </div>
+          <div class="img-container">
+            <!-- imagem aleatória, como não recebo do back
+            as imagens, eu fiz isso para ficar dinâmico para o usuário.
+            -->
+            <img [src]="getJogos()" alt="rpg" class="img-jogo">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- Quando o usuário for filtrar e não existir o parâmetro -->
+    <div>
+      <h1 *ngIf="filtro && filtro.value &&  alunos.length === 0" class="nao-encontrado">Aluno não encontrado.</h1>
+    </div>
+</div>
+
+
+
+

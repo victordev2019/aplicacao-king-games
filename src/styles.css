@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+
+  margin: 0;
+  font-family: "PT Sans", sans-serif;
+  height: 100%;
+
+}
+
+body {
+  background-image: url('assets/images/controle.jpg');
+  background-repeat: repeat-y;
+  background-size: cover;
+  height: 100vh;
+}
+
+
+
+
+
+
+
