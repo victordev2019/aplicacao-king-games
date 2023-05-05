@@ -18,7 +18,7 @@ export class NavComponent implements OnInit {
         menuBg.style.opacity = '0.7';
         menuBg.style.visibility = 'visible';
       } else {
-         menuBg.style.opacity = '5';
+         menuBg.style.opacity = '0.5';
         setTimeout(() => {
           menuBg.style.visibility = 'hidden';
         }, 500);
