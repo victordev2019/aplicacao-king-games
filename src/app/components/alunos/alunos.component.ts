@@ -16,6 +16,7 @@ export class AlunosComponent implements OnInit{
     'assets/images/the-last-of-us.png',
     'assets/images/gta-5.jpg'
   ];
+  imagemAleatoria: string = '';
   perfilMasculino: string = 'assets/images/deadpool.jpg';
   perfilFeminino: string = 'assets/images/ellie-1.jpg';
   alunos: Aluno[] = [];
@@ -43,6 +44,7 @@ export class AlunosComponent implements OnInit{
     .subscribe(() => {
       this.buscarAlunos();
     });
+    this.imagemAleatoria = this.getJogos();
   }
 
   /* Essa função cria imagens aleatórias

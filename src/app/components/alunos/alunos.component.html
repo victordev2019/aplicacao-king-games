@@ -13,7 +13,7 @@
             quando pesquisa por um usuário, quando for 1 eu aumentei para ficar confortável
             para o usuário.
       -->
-      <div [ngClass]="{'row-cols-md-2': alunos.length > 1, 'row-cols-md-1': alunos.length === 1}" class="row g-4">
+      <div [ngClass]="{'row-cols-md-2': alunos.length > 1, 'row-cols-md-1': alunos.length === 1}" class="row row-cols-1 g-4">
       <div class="col" *ngFor="let aluno of alunos">
         <div class="card">
             <div class="d-flex align-items-center">
@@ -32,7 +32,7 @@
             <!-- imagem aleatória, como não recebo do back
             as imagens, eu fiz isso para ficar dinâmico para o usuário.
             -->
-            <img [src]="getJogos()" alt="rpg" class="img-jogo">
+            <img [src]="imagemAleatoria" alt="rpg" class="img-jogo">
           </div>
         </div>
       </div>
