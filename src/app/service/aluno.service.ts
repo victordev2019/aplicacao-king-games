@@ -11,7 +11,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 
 export class AlunoService {
 
-  private readonly baseUrl= 'https://api-laser-teste.herokuapp.com';
+  private readonly baseUrl= 'https://api-king-games.herokuapp.com';
   private readonly apiUrl = `${this.baseUrl}/alunos`;
 
   constructor(private http: HttpClient, private snackBar: MatSnackBar) { }
