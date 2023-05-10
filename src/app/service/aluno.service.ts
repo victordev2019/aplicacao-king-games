@@ -32,11 +32,11 @@ export class AlunoService {
   obterAlunos(filtro?: string): Observable<Aluno[]> {
     let params = new HttpParams();
     if (filtro) {
-      if (filtro === 'Feminino') {
+      if (filtro.toUpperCase() === 'FEMININO' || filtro.toUpperCase() === 'F') {
         params = params.append('sexo', 'F');
-      }else if (filtro === 'Masculino'){
+      } else if (filtro.toUpperCase() === 'MASCULINO' || filtro.toUpperCase() === 'M') {
         params = params.append('sexo', 'M');
-      }else {
+      } else {
         params = params.append('q', filtro);
       }
 
